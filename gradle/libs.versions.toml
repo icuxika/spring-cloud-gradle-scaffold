@@ -1,0 +1,85 @@
+[versions]
+project-version = "0.0.1"
+project-group = "com.icuxika"
+spring-boot-version = "3.1.2"
+spring-cloud-version = "2022.0.3"
+spring-cloud-alibaba-version = "2022.0.0.0"
+
+[libraries]
+# bom
+spring-boot-dependencies = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot-version" }
+spring-cloud-dependencies = { group = "org.springframework.cloud", name = "spring-cloud-dependencies", version.ref = "spring-cloud-version" }
+spring-cloud-alibaba-dependencies = { group = "com.alibaba.cloud", name = "spring-cloud-alibaba-dependencies", version.ref = "spring-cloud-alibaba-version" }
+
+# Spring boot starters
+activemq = { group = "org.springframework.boot", name = "spring-boot-starter-activemq" }
+amqp = { group = "org.springframework.boot", name = "spring-boot-starter-amqp" }
+aop = { group = "org.springframework.boot", name = "spring-boot-starter-aop" }
+artemis = { group = "org.springframework.boot", name = "spring-boot-starter-artemis" }
+batch = { group = "org.springframework.boot", name = "spring-boot-starter-batch" }
+cache = { group = "org.springframework.boot", name = "spring-boot-starter-cache" }
+data-cassandra = { group = "org.springframework.boot", name = "spring-boot-starter-data-cassandra" }
+data-cassandra-reactive = { group = "org.springframework.boot", name = "spring-boot-starter-data-cassandra-reactive" }
+data-couchbase = { group = "org.springframework.boot", name = "spring-boot-starter-data-couchbase" }
+data-couchbase-reactive = { group = "org.springframework.boot", name = "spring-boot-starter-data-couchbase-reactive" }
+data-elasticsearch = { group = "org.springframework.boot", name = "spring-boot-starter-data-elasticsearch" }
+data-jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-data-jdbc" }
+data-jpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }
+data-ldap = { group = "org.springframework.boot", name = "spring-boot-starter-data-ldap" }
+data-mongodb = { group = "org.springframework.boot", name = "spring-boot-starter-data-mongodb" }
+data-mongodb-reactive = { group = "org.springframework.boot", name = "spring-boot-starter-data-mongodb-reactive" }
+data-neo4j = { group = "org.springframework.boot", name = "spring-boot-starter-data-neo4j" }
+data-r2dbc = { group = "org.springframework.boot", name = "spring-boot-starter-data-r2dbc" }
+data-redis = { group = "org.springframework.boot", name = "spring-boot-starter-data-redis" }
+data-redis-reactive = { group = "org.springframework.boot", name = "spring-boot-starter-data-redis-reactive" }
+data-rest = { group = "org.springframework.boot", name = "spring-boot-starter-data-rest" }
+freemarker = { group = "org.springframework.boot", name = "spring-boot-starter-freemarker" }
+groovy-templates = { group = "org.springframework.boot", name = "spring-boot-starter-groovy-templates" }
+hateoas = { group = "org.springframework.boot", name = "spring-boot-starter-hateoas" }
+integration = { group = "org.springframework.boot", name = "spring-boot-starter-integration" }
+jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-jdbc" }
+jersey = { group = "org.springframework.boot", name = "spring-boot-starter-jersey" }
+jooq = { group = "org.springframework.boot", name = "spring-boot-starter-jooq" }
+json = { group = "org.springframework.boot", name = "spring-boot-starter-json" }
+jta-atomikos = { group = "org.springframework.boot", name = "spring-boot-starter-jta-atomikos" }
+mail = { group = "org.springframework.boot", name = "spring-boot-starter-mail" }
+mustache = { group = "org.springframework.boot", name = "spring-boot-starter-mustache" }
+oauth2-client = { group = "org.springframework.boot", name = "spring-boot-starter-oauth2-client" }
+oauth2-resource-server = { group = "org.springframework.boot", name = "spring-boot-starter-oauth2-resource-server" }
+quartz = { group = "org.springframework.boot", name = "spring-boot-starter-quartz" }
+rsocket = { group = "org.springframework.boot", name = "spring-boot-starter-rsocket" }
+security = { group = "org.springframework.boot", name = "spring-boot-starter-security" }
+test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+thymeleaf = { group = "org.springframework.boot", name = "spring-boot-starter-thymeleaf" }
+validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+web-services = { group = "org.springframework.boot", name = "spring-boot-starter-web-services" }
+webflux = { group = "org.springframework.boot", name = "spring-boot-starter-webflux" }
+websocket = { group = "org.springframework.boot", name = "spring-boot-starter-websocket" }
+
+actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
+
+# Spring cloud
+bootstrap = { group = "org.springframework.cloud", name = "spring-cloud-starter-bootstrap" }
+loadbalancer = { group = "org.springframework.cloud", name = "spring-cloud-starter-loadbalancer" }
+openfeign = { group = "org.springframework.cloud", name = "spring-cloud-starter-openfeign" }
+gateway = { group = "org.springframework.cloud", name = "spring-cloud-starter-gateway" }
+
+# Spring cloud alibaba
+nacos-config = { group = "com.alibaba.cloud", name = "spring-cloud-starter-alibaba-nacos-config" }
+nacos-discovery = { group = "com.alibaba.cloud", name = "spring-cloud-starter-alibaba-nacos-discovery" }
+sentinel-datasource-nacos = { group = "com.alibaba.csp", name = "sentinel-datasource-nacos" }
+sentinel = { group = "com.alibaba.cloud", name = "spring-cloud-starter-alibaba-sentinel" }
+seata = { group = "com.alibaba.cloud", name = "spring-cloud-starter-alibaba-seata" }
+sentinel-gateway = { group = "com.alibaba.cloud", name = "spring-cloud-alibaba-sentinel-gateway" }
+
+# Other
+
+commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = { strictly = "[3.8, 4.0[", prefer = "3.9" } }
+commons-text = { group = "org.apache.commons", name = "commons-text", version = "1.9" }
+
+[bundles]
+basic = ["security", "jdbc"]
+
+[plugins]
+boot = { id = "org.springframework.boot", version.ref = "spring-boot-version" }
